@@ -565,6 +565,8 @@ namespace NetCDFInterop
                     return Path.Combine(path, name);
                 case PlatformID.Unix:
                     return "/usr/lib/libnetcdf.so.7";
+                case PlatformID.MacOSX:
+                    return "/usr/lib/libnetcdf-cxx4.1.0.3.dylib";
                 default:
                     throw new NotSupportedException(String.Format("Platform not supported: {0}", platform));
             }
